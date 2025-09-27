@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>B28 · Validación de zona y tiempos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+  <div class="container py-4">
+    <h1 class="h4 text-center mb-4">Validación de entrega</h1>
+
+    <div class="row g-4">
+      <!-- Validación zona -->
+      <div class="col-12 col-lg-6">
+        <section class="p-3 bg-white rounded shadow-sm">
+          <h2 class="h6 mb-3">Zona de entrega</h2>
+          <div class="mb-3">
+            <label class="form-label">Dirección del cliente</label>
+            <input class="form-control" placeholder="Ej: Av. Central 1234">
+          </div>
+          <div class="alert alert-success">Dentro de 3 km → despacho permitido.</div>
+          <div class="alert alert-danger">Fuera de 3 km → despacho bloqueado.</div>
+        </section>
+      </div>
+
+      <!-- Registro de tiempos -->
+      <div class="col-12 col-lg-6">
+        <section class="p-3 bg-white rounded shadow-sm">
+          <h2 class="h6 mb-3">Tiempos de entrega</h2>
+          <form class="row g-3">
+            <div class="col-12 col-md-6">
+              <label class="form-label">Tiempo estimado (min)</label>
+              <input type="number" class="form-control" placeholder="25">
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label">Tiempo real (min)</label>
+              <input type="number" class="form-control" placeholder="27">
+            </div>
+          </form>
+          <div class="alert alert-info mt-3 mb-0">
+            * Métrica: diferencia entre estimado y real, promedios por día/semana.
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
